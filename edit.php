@@ -23,30 +23,51 @@
 		<p class="names"> Name <input type="text" value="<?php echo $birthdays["person"]; ?>" name="person"> </p>
 
 		
-		<p class="names"> Day <select name="day">
+		<p class="names">Day 
+		<select name="day">
 
-			<?php for ($Day=1; $Day <=31 ; $Day++){ ?>
-				<?php if(selected)?><option value="<?php echo $Day ?>" selected="true"><?php echo $Day ?></option>
-			<?php } ?>
+		<?php for ($day=1; $day <=31 ; $day++){ ?>
+			<option value="<?php echo $day ?>" 
+				<?php 
+					if ($day == $birthdays["day"]){
+			            echo "selected=\"true\"";
+			        } ?>><?php echo $day 
+			    ?>	
+		    </option>
+		<?php } ?>
 
 		</select></p>
 
 		
 
-		<p class="names"> Month <select name="month">
+		<p class="names"> Month 
+		<select name="month">
 
-			<?php for ($Month=1; $Month <=12 ; $Month++){ ?>
-				<option value="<?php echo $Month ?>"><?php echo $Month ?></option>
+			<?php for ($month=1; $month <=12 ; $month++){ ?>
+				<option value="<?php echo $month ?>"
+					<?php 
+						if ($month == $birthdays["month"]){
+			            	echo "selected=\"true\"";
+			        	} ?>>
+			        <?php echo $month ?>	
+				</option>
 			<?php } ?>
 		
 		</select></p>
 
 
 
-		<p class="names"> Year <select name="year">
+		<p class="names"> Year 
+		<select name="year">
 
-			<?php for ($Year=1960; $Year <=2017 ; $Year++){ ?>
-				<option value="<?php echo $Year ?>"><?php echo $Year ?></option>
+			<?php for ($year=1960; $year <=2017 ; $year++){ ?>
+				<option value="<?php echo $year ?>"
+					<?php 
+						if ($year == $birthdays["year"]){
+			            	echo "selected=\"true\"";
+			        	} ?>>
+			       	<?php echo $year ?>
+			    </option>
 			<?php } ?>
 		
 		</select> </p>
@@ -63,7 +84,7 @@
 <?php }else if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$db = new PDO("mysql:host=localhost;dbname=calendar", "root", "");
 
-	$stmt = $db -> prepare("UPDATE birthdays (person, day, month, year) VALUES (:person, :day, :month, :year)");
+	$stmt = $db -> prepare("UPDATE birthdays (person, day, month, year) VALUES (:person, :day, :month, :year)"); 
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	// updates the set values in the statement
 
