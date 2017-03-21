@@ -7,5 +7,21 @@
 	$stmt = $db->prepare($sql);
 	$stmt->execute(array(":id"=>$_GET['id'])); 
 	// sends the inputtted ID to the Database in a array
+<<<<<<< HEAD
 	header("Location: index.php");
 ?>
+=======
+
+?>
+
+
+<?php  require('header.php');	 ?>
+<body>
+	<main>
+		<section>
+			<h1> Delete succes :D (all deleted people will die for real ! )</h1>
+			<a href="index.php"><button>Back</button></a>
+		</section>
+	</main>
+</body>
+>>>>>>> e814da98e39b4fbb3bd939ccd50df1a77fecc603

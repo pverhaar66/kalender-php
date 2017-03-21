@@ -96,9 +96,19 @@
     $stmt->bindParam(':id', $_GET["id"]);
     $stmt->execute();
     // binds the updated parameters given by the user
+<<<<<<< HEAD
     header("Location: index.php");
 ?>
 
+=======
+?>
+
+	<main>
+		<h1>Succesfully Updated :D</h1>
+		<button><a href="index.php">back</a></button>
+	</main>	
+
+>>>>>>> e814da98e39b4fbb3bd939ccd50df1a77fecc603
 <?php } ?>
 
 </body>
