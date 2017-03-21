@@ -1,0 +1,169 @@
+body {
+    font-family: arial;
+    font-size: 12pt;
+    background-image: url("img/blueimg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+
+main {
+  margin: 0 auto;
+  width: 50%;
+}
+
+section {
+border: 2px solid black;
+
+}
+
+button {
+  height: 30px;
+  width: 80px;
+  background-color: aliceblue;
+  border: 2px solid black;
+}
+
+h1 {
+  font-family: arial;
+  font-weight: normal;
+  font-size: 24pt;
+  color: #666;
+}
+
+h2 {
+  font-family: arial;
+  font-weight: normal;
+  font-size: 35px;
+  color: #069;
+  margin-bottom: 0;
+}
+
+h1 {
+    margin: 0;
+    border-bottom: 1px dotted grey;
+    color: black;
+}
+
+h2 {
+    margin: 0;
+}
+
+h2 ~ p { 
+    margin: 0;
+    position: relative;
+    top: -40px;     
+    left: 50px;     
+    font-size: 20px;
+}
+
+p:last-of-type { 
+    position: static;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a + a {     
+    color: red;
+    font-size: 80%;
+    vertical-align: super;
+}
+
+p:last-of-type a { 
+    color: blue;
+    
+    display: block;    
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {    
+    width: 400px;
+    height: 100%;
+    background-color: aliceblue;
+    margin: 125px auto;
+    padding:10px;
+    border: 2px solid black;
+}
+input {
+  float: right;
+}
+
+/*===== create =====*/
+
+#submit{
+    height: 30px;
+    width: 100px;
+    border: 2px solid black;
+    margin-top: 35px;
+}
+.names {
+  padding: 0px;
+  margin: 10px;
+  font-size: 20px;
+
+}
+
+#back {
+  position: absolute;
+  top: 281px;
+  left: 885px;
+  background-color: lightgrey;
+  height: 30px;
+  width: 100px;
+}
+
+#back:hover, #submit{
+  background-color: aliceblue;
+}
+
+.exo {
+  padding-left: 10px;
+}
+
+
+select{
+  float: right;
+}
+
+/*=====read======*/
+
+#read {
+  background-color: aliceblue;
+}
+.readp {
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+#backread {
+left: 510px;
+}
+
+#editread {
+left: 630px;
+}
+
+#backread, #editread {
+  position: absolute;
+  height: 30px;
+  width: 100px;
+  top: 230px;
+}
+
+/*=====update====*/
+
+#update {
+  height: 30px;
+  width: 100px;
+  border: 2px solid black;
+  margin-top: 3px;
+}
