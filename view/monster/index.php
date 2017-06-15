@@ -34,8 +34,9 @@
 			</table>	
 
 			 <aside>
-			 <a href='<?= URL ?>patient/index'><button class="navbutton">Go to patients</button></a>
-			 <a href='<?= URL ?>specie/index'><button class="navbutton">Go to species</button></a>
+			 <a href='<?= URL ?>spell/index'><button class="navbutton">Go to spells</button></a>
+			 <a href='<?= URL ?>trap/index'><button class="navbutton">Go to traps</button></a>
+			 <a href='<?= URL ?>monster/htpygo'><button class="navbutton">How to play</button></a>
 			 </aside>	
 	</main>
 </center>

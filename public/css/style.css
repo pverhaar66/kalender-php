@@ -2,7 +2,7 @@
 
 body
 {
-	background-image: url("Back-TF-EN-VG.png");
+	background-image: url("img/Back-TF-EN-VG.png");
 }
 
 a{
@@ -16,11 +16,7 @@ main{
 	margin: 0 auto;
 }
 
-tr:nth-child(even){
-	background-color: #1affb2;
-}
-
-tr:nth-child(odd){
+tr {
 	background-color: lightgrey;
 }
 
@@ -32,7 +28,7 @@ table {
 }
 
 p {
-	font-size: 22px;
+	font-size: 22px;	
 }
 
 input{
@@ -78,29 +74,86 @@ input{
 
 #submitcreate {
 	margin:10px;
+	height: 45px;
+	width: 150px;
+	border: solid black 2px;
+	background-color: grey;
+	font-size: 20px;
 }
 
 #createbutton {
-	top: 750px;
-	right: 300px;
-	height: 30px;
-	width: 100px;
+	height: 45px;
+	width: 150px;
+	border: solid black 2px;
+	background-color: grey;
+	font-size: 20px;
 }
 
 #create {
+	background-color: #f2f2f2;
 	left: 1000px;
 	top: 200px;
 	display: inline-block;
-	background-color: lightgrey;
 	border: solid black 2px;
 	padding: 30px;
 
 }
 
-/* ===== edit ====== */
 
-#submitedit {
+/* ===== read ====== */
+
+#cardreader{
+	background-color: #f2f2f2;
+	height: 100%;
+	width: 450px;
 	position: absolute;
-	top: 550px;
-	right: 0px;
+	right: 400px;
+}
+
+.readtext{
+	padding-left: 12px;
+	margin: 10px;
+	border: 2px solid black;
+	width: 400px;
+
+}
+
+#readback{
+	height: 45px;
+	width: 150px;
+	border: solid black 2px;
+	background-color: grey;
+	margin-top: 20px;
+	font-size: 20px;
+	margin-left: 10px;
+}
+#links{
+	width: 410px;
+	margin: 10px;
+	border: 2px solid black;
+	padding-bottom: 10px;
+}
+
+.link{
+	border: 2px solid black;
+	display: inline;
+	font-size: 20px;
+	padding: 5px;
+	margin-left: 10px;
+}
+
+/* ==== how to play Yu-Gi-Oh ==== */
+
+#htpygo {
+	background-color: #f2f2f2;
+	font-size: 12px;
+	width: 1000px;
+	height: 100%;
+}
+
+.headpiece {
+	background-color: red;
+	padding-top: 12px;
+	height: 60px;
+	font-size: 40px;
 }

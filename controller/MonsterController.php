@@ -59,3 +59,8 @@ function editSave() {
 
  		header("Location:" . URL . "monster/index");
 }
+
+function htpygo(){
+	render("monster/htpygo");
+}
+
