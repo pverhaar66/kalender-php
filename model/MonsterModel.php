@@ -40,6 +40,9 @@ function createmonster() {
 	$monster_type1 = isset($_POST["monster_type1"]) ? $_POST['monster_type1'] : null;
 	$monster_type2 = isset($_POST["monster_type2"]) ? $_POST['monster_type2'] : null;
 	$monster_type3 = isset($_POST["monster_type3"]) ? $_POST['monster_type3'] : null;
+	$monster_attack = isset($_POST["monster_attack"]) ? $_POST['monster_attack'] : null;
+	$monster_defense = isset($_POST["monster_defense"]) ? $_POST['monster_defense'] : null;
+	$monster_level = isset($_POST["monster_level"]) ? $_POST['monster_level'] : null;
 	$monster_description = isset($_POST["monster_description"]) ? $_POST['monster_description'] : null;
 
 
@@ -49,7 +52,7 @@ function createmonster() {
 
 	$db = openDatabaseConnection();
 
-	$sql = "INSERT INTO monsters (monster_name, monster_attribute, monster_type1, monster_type2, monster_type3, monster_description) VALUES(:monster_name, :monster_attribute, :monster_type1, :monster_type2, :monster_type3, :monster_description)";
+	$sql = "INSERT INTO monsters (monster_name, monster_attribute, monster_type1, monster_type2, monster_type3, monster_attack, monster_defense, monster_level, monster_description) VALUES(:monster_name, :monster_attribute, :monster_type1, :monster_type2, :monster_type3, :monster_attack, :monster_defense, :monster_level, :monster_description)";
 
 	$query = $db -> prepare($sql);
 	$query -> execute(array(':monster_name' => $monster_name,
@@ -57,6 +60,9 @@ function createmonster() {
 						 	':monster_type1' => $monster_type1,
 						 	':monster_type2' => $monster_type2,
 						 	':monster_type3' => $monster_type3,
+						 	':monster_attack' => $monster_attack,
+						 	':monster_defense' => $monster_defense,
+						 	':monster_level' => $monster_level,
 						 	':monster_description' => $monster_description));
 
 	$db = null;

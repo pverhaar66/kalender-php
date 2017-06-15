@@ -7,7 +7,7 @@
 
 			<p>Attribute</p>
 			<select name="monster_attribute">
-			<option value="Dark">dark</option>
+			<option value="Dark">Dark</option>
 			<option value="Divine">Divine</option>
 			<option value="Earth">Earth</option>
 			<option value="Fire">Fire</option>
@@ -37,27 +37,40 @@
 				<option value="Reptile">Reptile</option>
 				<option value="Rock">Rock</option>
 				<option value="Sea Serpent">Sea Serpent</option>
-				<option value="spellcaster">spellcaster</option>
+				<option value="Spellcaster">spellcaster</option>
 				<option value="Thunder">Thunder</option>
 				<option value="Warrior">Warrior</option>
 				<option value="Winged Beast">Winged Beast</option>
 				<option value="Wyrm">Wyrm</option>
 				<option value="Zombie">Zombie</option>
 			</select>
+
 			<select name="monster_type2">
 				<option value=" "> </option>
 				<option value="effect">Effect</option>
 				<option value="tuner">Tuner</option>
 				<option value="ritual">Ritual</option>
 			</select>
+
 			<select name="monster_type3">
 				<option value=" "> </option>
 				<option value="effect">Effect</option>
 				<option value="ritual">Ritual</option>
 			</select>
 
-			<p>Description</p><input type="text" placeholder="darius" 
-			name="monster_description" class="inputtext">
+			<p>ATK</p><input type="text" placeholder="darius" name="monster_attack" class="inputtext" maxlength="4">
+
+			<p>DEF</p><input type="text" placeholder="darius" name="monster_defense" class="inputtext" maxlength="4">
+
+			<p>Level/Rank</p>
+			<select name="monster_level">
+				<option>
+					<?php for ($Month=1; $Month <=12 ; $Month++){ ?>
+				<option value="<?php echo $Month ?>"><?php echo $Month ?></option>
+			<?php } ?>
+			</select>
+
+			<p>Description</p><input type="text" placeholder="darius" name="monster_description" class="inputtext"> <br>
 
 
 			
