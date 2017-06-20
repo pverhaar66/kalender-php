@@ -7,13 +7,13 @@
 
 			<p>Attribute</p>
 			<select name="monster_attribute">
-			<option value="Dark">Dark</option>
-			<option value="Divine">Divine</option>
-			<option value="Earth">Earth</option>
-			<option value="Fire">Fire</option>
-			<option value="Light">Light</option>
-			<option value="Water">Water</option>
-			<option value="Wind">Wind</option>
+				<option value="Dark">Dark</option>
+				<option value="Divine">Divine</option>
+				<option value="Earth">Earth</option>
+				<option value="Fire">Fire</option>
+				<option value="Light">Light</option>
+				<option value="Water">Water</option>
+				<option value="Wind">Wind</option>
 			</select>
 
 			<p>Type</p>
@@ -47,16 +47,28 @@
 
 			<select name="monster_type2">
 				<option value=" "> </option>
-				<option value="effect">Effect</option>
+				<option value="effect">effect</option>
 				<option value="tuner">Tuner</option>
-				<option value="ritual">Ritual</option>
+				<option value="xyz">xyz</option>
+				<option value="fusion">fusion</option>
+				<option value="synchro">synchro</option>
+				<option value="pendalum">pendalum</option>
+				<option value="gemini">gemini</option>
+				<option value="ritual">ritual</option>
 			</select>
 
 			<select name="monster_type3">
 				<option value=" "> </option>
-				<option value="effect">Effect</option>
-				<option value="ritual">Ritual</option>
+				<option value="effect">effect</option>
+				<option value="pendalum">Pendalum</option>
+				<option value="ritual">ritual</option>
 			</select>
+
+			<select name="monster_type4">
+				<option value=" "> </option>
+				<option value="effect">effect</option>
+			</select>
+
 
 			<p>ATK</p><input type="text" placeholder="darius" name="monster_attack" class="inputtext" maxlength="4">
 

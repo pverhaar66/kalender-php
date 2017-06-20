@@ -5,11 +5,11 @@
 				<tr>
 					<td class="top">name</td>
 					<td class="top">attribute</td>
-					<td class="top" colspan="3">type</td>
-					<td class="top" colspan="2">ATK/DEF</td>
+					<td class="top" colspan="4">type</td>
 					<td class="top">Level</td>
 					<td class="top">description</td>
-					<td class="top" colspan="3">options</td>
+					<td class="top">Show</td>
+
 				</tr>
 
 				<?php foreach ($monsters as $monster) {  ?>
@@ -19,14 +19,10 @@
 				 	<td class="bottom"><?= $monster['monster_type1'];?></td>
 				 	<td class="bottom"><?= $monster['monster_type2'];?></td>
 				 	<td class="bottom"><?= $monster['monster_type3'];?></td>
-				 	<td class="bottom"><?= $monster['monster_attack'];?></td>
-				 	<td class="bottom"><?= $monster['monster_defense'];?></td>
+				 	<td class="bottom"><?= $monster['monster_type4'];?></td>
 				 	<td class="bottom"><?= $monster['monster_level'];?></td>
 				 	<td class="bottom"><?= $monster['monster_description'];?></td>
 					<td class="bottom"> <a href="<?= URL ?>monster/readmonster/<?= $monster['monster_id'];?>"><button class="indexbutton">Info</button></a> </td>
-					<td class="bottom">	<a href="<?= URL ?>monster/editmonster/<?= $monster['monster_id'];?>"><button class="indexbutton">Edit</button></a> </td>
-					<td class="bottom">	<a href="<?= URL ?>monster/deletemonster/<?= $monster['monster_id'];?>"><button class="indexbutton">Delete</button></a></td>
-
 				</tr>
 				<?php } ?>
 				 <a href='<?= URL ?>monster/create'><button id="addbutton">Add monster</button></a>
