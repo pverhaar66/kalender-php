@@ -12,10 +12,10 @@
 		<table>
 
 				<tr>
-					<td class="topname"><a href="<?= URL ?>patient/index?sort=<?= $sort ?>&table=monster">name</td>
-					<td class="top"> <a href="<?= URL ?>patient/index?sort=<?= $sort ?>&table=attribute">attribute</td>
-					<td class="top" colspan="4"> <a href="<?= URL ?>patient/index?sort=<?= $sort ?>&table=type">type</td>
-					<td class="top"> <a href="<?= URL ?>patient/index?sort=<?= $sort ?>&table=level">Level</td>
+					<td class="topname"><a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=monster">name</td>
+					<td class="top"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=attribute">attribute</td>
+					<td class="top" colspan="4"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=type">type</td>
+					<td class="top"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=level">Level</td>
 					<td class="top">description</td>
 				</tr>
 

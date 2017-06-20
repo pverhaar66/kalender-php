@@ -1,5 +1,5 @@
 <?php
-
+	
 function getAllMonsters($sort, $table) {
 	$db = openDatabaseConnection();
 

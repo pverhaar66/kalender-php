@@ -14,7 +14,7 @@ function index()
 			$table = "monster_attribute";
 
 		}else if($_GET["table"] == "type"){
-			$table = "monster_type";
+			$table = "monster_type1";
 			
 		}else if($_GET["table"] == "level"){
 			$table = "monster_level";
@@ -38,10 +38,11 @@ if ($_GET["sort"] == "ASC") {
 }
 
 	render("monster/Index", 
-		array("monster" => getAllMonster($sort, $table)
+		array("monsters" => getAllMonsters($sort, $table),
 			"sort" => $sort == "ASC" ? "DESC" : "ASC"
 
-	));}
+	));
+}
 
 function create()
 {
