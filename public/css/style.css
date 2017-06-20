@@ -3,6 +3,7 @@
 body
 {
 	background-image: url("img/Back-TF-EN-VG.png");
+	background-attachment: fixed;
 }
 
 a{
@@ -39,6 +40,11 @@ p {
 input{
 	height: 30px;
 	width: 300px;
+}
+
+.inputtext3{
+	width: 350px;
+	height: 150px;
 }
 /* ===== on all indexes ====== */
 
@@ -79,11 +85,15 @@ input{
 	text-transform: capitalize;
 }
 
-.indexbutton {
-	width: 100%;
-	height: 100%;
-	font-size: 20px;
-	color: darkorange;
+.bottomtext, .toptext {
+	width: 500px;
+}
+.toptext {
+	background-color: red;
+	font-weight: bold;
+}
+.bottomtext {
+	height: 300px;
 }
 
 /* ===== createpage ====== */

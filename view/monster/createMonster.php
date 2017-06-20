@@ -1,5 +1,6 @@
 <center>
 	<main>
+	<img id="header" src="../public/css/img/header.jpg">
 		<section id="create">
 			<form action="<?= URL ?>monster/createSave" method="post">
 
@@ -82,7 +83,7 @@
 			<?php } ?>
 			</select>
 
-			<p>Description</p><input type="text" placeholder="darius" name="monster_description" class="inputtext"> <br>
+			<p>Description</p><textarea maxlength="500" rows="10" type="textarea" name="monster_description" class="inputtext3"></textarea> <br>
 
 
 			
@@ -92,5 +93,17 @@
 			<a href="<?= URL ?>monster/index"><button id="createbutton">Back</button></a> 	
 		</section>
 
+
 	</main>
 </center>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+	  $(window).keydown(function(event){
+	    if(event.keyCode == 13) {
+	      event.preventDefault();
+	      return false;
+	    }
+	  });
+	});
+</script>

@@ -2,7 +2,7 @@
 
 	<main>
 	<img id="header" src="../css/img/header.jpg">
-		<section id="create">
+	<section id="create">
 		<form action="<?= URL ?>monster/editSave" method = "POST">
 				<p>Name</p><input type="text" value="<?= $monster['monster_name'] ?>" name="monster_name" class="inputtext">
 
@@ -129,7 +129,7 @@
 					<?php	} ?>
 				</select>
 
-				<select name="monster_type3">
+				<select name="monster_type4">
 				<?php
 				$typeiv = array(" " => " ",
 				"effect" => "effect");
@@ -168,7 +168,7 @@
 				<?php } ?>
 				</select>
 
-				<p>Description</p><input type="text" value="<?= $monster['monster_description']; ?>" name="monster_description" class="inputtext"> <br>
+				<p>Description</p><textarea maxlength="500" rows="10" type="textarea" name="monster_description" class="inputtext3"><?= $monster['monster_description']; ?></textarea> <br>
 
 				<input type="hidden" value="<?= $monster['monster_id']; ?>" name="monster_id" class="inputtext" > <br>
 
@@ -183,3 +183,13 @@
 
 	</main>
 </center>
+<script type="text/javascript">
+	$(document).ready(function() {
+	  $(window).keydown(function(event){
+	    if(event.keyCode == 13) {
+	      event.preventDefault();
+	      return false;
+	    }
+	  });
+	});
+</script>

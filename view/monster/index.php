@@ -16,7 +16,7 @@
 					<td class="top"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=attribute">attribute</td>
 					<td class="top" colspan="4"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=type">type</td>
 					<td class="top"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=level">Level</td>
-					<td class="top">description</td>
+					<td class="toptext">description</td>
 				</tr>
 
 				<?php foreach ($monsters as $monster) {  ?>
@@ -28,7 +28,7 @@
 				 	<td class="bottom"><?= $monster['monster_type3'];?></td>
 				 	<td class="bottom"><?= $monster['monster_type4'];?></td>
 				 	<td class="bottom"><?= $monster['monster_level'];?></td>
-				 	<td class="bottom"><?= $monster['monster_description'];?></td>
+				 	<td class="bottomtext"><?= $monster['monster_description'];?></td>
 				</tr>
 				<?php } ?>
 				 
