@@ -4,9 +4,44 @@ require(ROOT . "model/monsterModel.php");
 
 function index()
 {
-	render("monster/Index", 
-		array("monsters" => getAllmonsters()));
+
+	if (isset($_GET["table"])) {
+
+	if ($_GET["table"] == "monster") {
+		$table = "monster_name";
+
+		}else if($_GET["table"] == "attribute"){
+			$table = "monster_attribute";
+
+		}else if($_GET["table"] == "type"){
+			$table = "monster_type";
+			
+		}else if($_GET["table"] == "level"){
+			$table = "monster_level";
+	}
+
+}else{
+	$table = "monster_name";
 }
+
+
+
+if (isset($_GET["sort"])) {
+
+if ($_GET["sort"] == "ASC") {
+		$sort = "ASC";
+	}else{
+		$sort = "DESC";
+	}
+}else{
+	$sort = "ASC";
+}
+
+	render("monster/Index", 
+		array("monster" => getAllMonster($sort, $table)
+			"sort" => $sort == "ASC" ? "DESC" : "ASC"
+
+	));}
 
 function create()
 {

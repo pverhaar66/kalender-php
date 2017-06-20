@@ -1,5 +1,7 @@
 <center>
+
 	<main>
+	<img id="header" src="../css/img/header.jpg">
 		<section id="create">
 		<form action="<?= URL ?>monster/editSave" method = "POST">
 				<p>Name</p><input type="text" value="<?= $monster['monster_name'] ?>" name="monster_name" class="inputtext">

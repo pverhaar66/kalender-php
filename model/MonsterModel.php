@@ -1,9 +1,9 @@
 <?php
 
-function getAllmonsters() {
+function getAllMonsters($sort, $table) {
 	$db = openDatabaseConnection();
 
-	$sql = "SELECT * FROM monsters";
+	$sql = "SELECT * FROM monsters ORDER BY ". $table ." ". $sort;
 	$query = $db->prepare($sql);
 	$query->execute();
 

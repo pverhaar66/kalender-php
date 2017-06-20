@@ -39,7 +39,7 @@ if ($_GET["sort"] == "ASC") {
 }
 
 	render("Patient/Index", 
-		array("patients" => getAllPatients($sort, $table), 
+		array("patients" => getAllPatients($sort, $table)
 			"sort" => $sort == "ASC" ? "DESC" : "ASC"
 
 	));
