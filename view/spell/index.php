@@ -1,38 +1,39 @@
 <center>
+	<img id="header" src="img/etc/header.jpg">
+
 	<main>
+
+		<nav>
+			 <a href='<?= URL ?>monster/create'><button class="navbutton">Add monster</button></a>
+			 <a href='<?= URL ?>spell/index'><button class="navbutton">Go to spells</button></a>
+			 <a href='<?= URL ?>trap/index'><button class="navbutton">Go to traps</button></a>
+			 <a href='<?= URL ?>monster/htpygo'><button class="navbutton">How to play</button></a>
+		</nav>	
 		<table>
 
 				<tr>
-					<td class="top"> <a href="<?= URL ?>patient/index?sort=<?= $sort ?>&table=patients"> Patient </a></td>
-					<td class="top"> <a href="<?= URL ?>patient/index?sort=<?= $sort ?>&table=species"> species </a></td>
-					<td class="top"> <a href="<?= URL ?>patient/index?sort=<?= $sort ?>&table=gender"> gender </a></td>
-					<td class="top" colspan="2"> <a href="<?= URL ?>patient/index?sort=<?= $sort ?>&table=client"> Client </a></td>
-					<td class="top"> Status </td>		
-					<td class="top" colspan="3">options</td>
+					<td class="topname"><a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=monster">name</td>
+					<td class="top"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=attribute">attribute</td>
+					<td class="top" colspan="4"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=type">type</td>
+					<td class="top"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=level">Level</td>
+					<td class="toptext">description</td>
 				</tr>
 
-				<?php foreach ($patients as $patient) {  ?>
+				<?php foreach ($monsters as $monster) {  ?>
 				<tr>
-					<td class="bottom"><?= $patient['patient_name'];?></td>
-				 	<td class="bottom"><?= $patient['species_description'];?></td>
-				 	<td class="bottom"><?= $patient['patient_gender'];?></td>
-				 	<td class="bottom"><?= $patient['client_firstname'];?></td>
-				 	<td class="bottom"><?= $patient['client_lastname'];?></td>
-					<td class="bottom"><?= $patient['patient_status'];?></td>
-					<td class="bottom"><a href="<?= URL ?>patient/readPatient/<?= $patient['patient_id'];?>"><button class="indexbutton">Info</button></a> </td>
-					<td class="bottom"><a href="<?= URL ?>patient/editPatient/<?= $patient['patient_id'];?>"><button class="indexbutton">Edit</button></a> </td>
-					<td class="bottom"><a href="<?= URL ?>patient/deletePatient/<?= $patient['patient_id'];?>"><button class="indexbutton">Delete</button></a></td>
-
+					<td class="bottomname"><a href="<?= URL ?>monster/readmonster/<?= $monster['monster_id'];?>"><?= $monster['monster_name'];?></a></td>
+					<td class="bottom"><?= $monster['monster_attribute'];?></td>
+				 	<td class="bottom"><?= $monster['monster_type1'];?></td>
+				 	<td class="bottom"><?= $monster['monster_type2'];?></td>
+				 	<td class="bottom"><?= $monster['monster_type3'];?></td>
+				 	<td class="bottom"><?= $monster['monster_type4'];?></td>
+				 	<td class="bottom"><?= $monster['monster_level'];?></td>
+				 	<td class="bottomtext"><?= $monster['monster_description'];?></td>
 				</tr>
 				<?php } ?>
-				 <a href='<?= URL ?>patient/create'><button id="addbutton">Add patient</button></a>
+				 
 
-			</table>		
-
-			 <aside>
-			 <a href='<?= URL ?>client/index'><button class="navbutton">Go to clients</button></a>
-			 <a href='<?= URL ?>specie/index'><button class="navbutton">Go to species</button></a>
-			 </aside>
+			</table>	
 	</main>
 </center>
 

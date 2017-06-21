@@ -1,6 +1,6 @@
 <center>
 <main>
-<img id="header" src="../css/img/header.jpg">
+<img id="header" src="<?= URL; ?>css/img/etc/header.jpg">
 	<a href="<?= URL ?>monster/index"><button id="readback">Back</button></a> 
 	<section id="htpygo">
 

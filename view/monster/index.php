@@ -1,5 +1,5 @@
 <center>
-	<img id="header" src="../public/css/img/header.jpg">
+	<img id="header" src="<?= URL; ?>css/img/etc/header.jpg">
 
 	<main>
 
