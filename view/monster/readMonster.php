@@ -1,6 +1,7 @@
 	<main>
 		<img id="header" src="<?= URL; ?>css/img/etc/header.jpg">
-		<img id="readimg" src="<?= URL; ?>css/img/monsters/monster<?= $monster["monster_id"] ?>.png">
+		<img id="readimg" src="<?= URL; ?>css/img/monsters/<?= $monster["monster_name"] ?>.png">
+												<!-- selects the picture for the card accordingly to the card name -->
 		<section id="cardreader">
 
 			<p class="readtext"> Name : <?= $monster['monster_name'];?></p>
@@ -10,6 +11,8 @@
 			<p class="readtext"> Defense : <?= $monster['monster_defense'];?></p>
 			<p class="readtext"> Level : <?= $monster['monster_level'];?></p>
 			<p class="readtext"> Description : <?= $monster['monster_description'];?></p>
+
+			<!-- all readtext classes read out a the selected monster info -->
 
 			<section id="links">
 				<h1 >Links</h1>

@@ -1,6 +1,6 @@
 	<main>
 		<img id="header" src="<?= URL ?>css/img/etc/header.jpg">
-		<img id="readimg" src="<?= URL ?>css/img/spells/spell<?= $spell["spell_id"] ?>.png">
+		<img id="readimg" src="<?= URL ?>css/img/spells/<?= $spell["spell_name"] ?>.png">
 		<section id="cardreader">
 
 			<p class="readtext"> Name : <?= $spell['spell_name'];?></p>

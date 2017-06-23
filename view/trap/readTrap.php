@@ -1,6 +1,6 @@
 	<main>
 		<img id="header" src="<?= URL ?>css/img/etc/header.jpg">
-		<img id="readimg" src="<?= URL ?>css/img/traps/trap<?= $trap["trap_id"] ?>.png">
+		<img id="readimg" src="<?= URL ?>css/img/traps/<?= $trap["trap_name"] ?>.png">
 		<section id="cardreader">
 
 			<p class="readtext"> Name : <?= $trap['trap_name'];?></p>
