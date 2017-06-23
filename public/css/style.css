@@ -69,6 +69,12 @@ input{
 	width: 120px;
 
 }
+.bottomnametrap, .topnametrap, .toptrap, .toptexttrap{
+	width: 150px;
+	height: 30px;
+	background-color: purple;
+	font-weight: bold;
+}
 
 .bottomnamespell, .topnamespell, .topspell, .toptextspell{
 	width: 150px;
@@ -77,10 +83,10 @@ input{
 	font-weight: bold;
 }
 
-.bottomname, .topname{
+.bottomnamemonster, .topnamemonster, .topmonster, .toptextmonster{
 	width: 150px;
 	height: 30px;
-	background-color: red;
+	background-color: Chocolate;
 	font-weight: bold;
 }
 

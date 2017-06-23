@@ -1,27 +1,20 @@
 <?php
 
-require(ROOT . "model/monsterModel.php");
+require(ROOT . "model/trapModel.php");
 
 function index()
 {
 
 	if (isset($_GET["table"])) {
 
-	if ($_GET["table"] == "monster") {
-		$table = "monster_name";
-
-		}else if($_GET["table"] == "attribute"){
-			$table = "monster_attribute";
+	if ($_GET["table"] == "trap") {
+		$table = "trap_name";
 
 		}else if($_GET["table"] == "type"){
-			$table = "monster_type1";
-			
-		}else if($_GET["table"] == "level"){
-			$table = "monster_level";
-	}
-
+			$table = "trap_type";
+}
 }else{
-	$table = "monster_name";
+	$table = "trap_name";
 }
 
 
@@ -37,8 +30,8 @@ if ($_GET["sort"] == "ASC") {
 	$sort = "ASC";
 }
 
-	render("monster/Index", 
-		array("monsters" => getAllMonsters($sort, $table),
+	render("trap/Index", 
+		array("traps" => getAllTraps($sort, $table),
 			"sort" => $sort == "ASC" ? "DESC" : "ASC"
 
 	));
@@ -46,54 +39,54 @@ if ($_GET["sort"] == "ASC") {
 
 function create()
 {
-	render("monster/createmonster");
+	render("trap/createTrap");
 	
 }
 
 function createSave()
 {
 
- 	if (!createmonster()) {
+ 	if (!createTrap()) {
 
 	 		header("Location:" . URL . "error/index");
 	 		exit();
  	}
 
- 		header("Location:" . URL . "monster/index");
+ 		header("Location:" . URL . "trap/index");
 }
 
 
-function deletemonster($id)
+function deleteTrap($id)
 {
 	if (!delete($id)) {
 		 		header("Location:" . URL . "error/index");
 	 		exit();
  	}
 
- 		header("Location:" . URL . "monster/index");
+ 		header("Location:" . URL . "trap/index");
 	
 }
 
-function readmonster($id)
+function readTrap($id)
 {
-	render("monster/readmonster" ,array('monster' => getmonster($id)));
+	render("trap/readTrap" ,array('trap' => gettrap($id)));
 
 }
 
-function editmonster($id)
+function editTrap($id)
 {
-	render("monster/editmonster", array('monster' => getmonster($id)));
+	render("trap/editTrap", array('trap' => gettrap($id)));
 }
 
 function editSave() {
 
-	 	if (!editThismonster()) {
+	 	if (!editThisTrap()) {
 
 	 		header("Location:" . URL . "error/index");
 	 		exit();
  	}
 
- 		header("Location:" . URL . "monster/index");
+ 		header("Location:" . URL . "trap/index");
 }
 
 function htpygo(){

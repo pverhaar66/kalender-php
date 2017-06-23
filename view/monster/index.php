@@ -12,16 +12,16 @@
 		<table>
 
 				<tr>
-					<td class="topname"><a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=monster">name</td>
-					<td class="top"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=attribute">attribute</td>
-					<td class="top" colspan="4"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=type">type</td>
-					<td class="top"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=level">Level</td>
-					<td class="toptext">description</td>
+					<td class="topnamemonster"><a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=monster">name</td>
+					<td class="topmonster"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=attribute">attribute</td>
+					<td class="topmonster" colspan="4"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=type">type</td>
+					<td class="topmonster"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=level">Level</td>
+					<td class="toptextmonster">description</td>
 				</tr>
 
 				<?php foreach ($monsters as $monster) {  ?>
 				<tr>
-					<td class="bottomname"><a href="<?= URL ?>monster/readmonster/<?= $monster['monster_id'];?>"><?= $monster['monster_name'];?></a></td>
+					<td class="bottomnamemonster"><a href="<?= URL ?>monster/readmonster/<?= $monster['monster_id'];?>"><?= $monster['monster_name'];?></a></td>
 					<td class="bottom"><?= $monster['monster_attribute'];?></td>
 				 	<td class="bottom"><?= $monster['monster_type1'];?></td>
 				 	<td class="bottom"><?= $monster['monster_type2'];?></td>
