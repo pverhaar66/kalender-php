@@ -4,9 +4,9 @@
 	<main>
 
 		<nav>
-			 <a href='<?= URL ?>monster/create'><button class="navbutton">Add monster</button></a>
-			 <a href='<?= URL ?>spell/index'><button class="navbutton">Go to spells</button></a>
-			 <a href='<?= URL ?>trap/index'><button class="navbutton">Go to traps</button></a>
+			 <a href='<?= URL ?>monster/create'><button class="navbutton">Add Monster</button></a>
+			 <a href='<?= URL ?>spell/index'><button class="navbutton">Go to Spells</button></a>
+			 <a href='<?= URL ?>trap/index'><button class="navbutton">Go to Traps</button></a>
 			 <a href='<?= URL ?>monster/htpygo'><button class="navbutton">How to play</button></a>
 		</nav>	
 		<table>

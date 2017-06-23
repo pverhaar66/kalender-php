@@ -1,27 +1,20 @@
 <?php
 
-require(ROOT . "model/monsterModel.php");
+require(ROOT . "model/spellModel.php");
 
 function index()
 {
 
 	if (isset($_GET["table"])) {
 
-	if ($_GET["table"] == "monster") {
-		$table = "monster_name";
-
-		}else if($_GET["table"] == "attribute"){
-			$table = "monster_attribute";
+	if ($_GET["table"] == "spell") {
+		$table = "spell_name";
 
 		}else if($_GET["table"] == "type"){
-			$table = "monster_type1";
-			
-		}else if($_GET["table"] == "level"){
-			$table = "monster_level";
-	}
-
+			$table = "spell_type";
+}
 }else{
-	$table = "monster_name";
+	$table = "spell_name";
 }
 
 
@@ -37,8 +30,8 @@ if ($_GET["sort"] == "ASC") {
 	$sort = "ASC";
 }
 
-	render("monster/Index", 
-		array("monsters" => getAllMonsters($sort, $table),
+	render("spell/Index", 
+		array("spells" => getAllspells($sort, $table),
 			"sort" => $sort == "ASC" ? "DESC" : "ASC"
 
 	));
@@ -46,57 +39,57 @@ if ($_GET["sort"] == "ASC") {
 
 function create()
 {
-	render("monster/createmonster");
+	render("spell/createspell");
 	
 }
 
 function createSave()
 {
 
- 	if (!createmonster()) {
+ 	if (!createspell()) {
 
 	 		header("Location:" . URL . "error/index");
 	 		exit();
  	}
 
- 		header("Location:" . URL . "monster/index");
+ 		header("Location:" . URL . "spell/index");
 }
 
 
-function deletemonster($id)
+function deletespell($id)
 {
 	if (!delete($id)) {
 		 		header("Location:" . URL . "error/index");
 	 		exit();
  	}
 
- 		header("Location:" . URL . "monster/index");
+ 		header("Location:" . URL . "spell/index");
 	
 }
 
-function readmonster($id)
+function readspell($id)
 {
-	render("monster/readmonster" ,array('monster' => getmonster($id)));
+	render("spell/readspell" ,array('spell' => getspell($id)));
 
 }
 
-function editmonster($id)
+function editspell($id)
 {
-	render("monster/editmonster", array('monster' => getmonster($id)));
+	render("spell/editspell", array('spell' => getspell($id)));
 }
 
 function editSave() {
 
-	 	if (!editThismonster()) {
+	 	if (!editThisspell()) {
 
 	 		header("Location:" . URL . "error/index");
 	 		exit();
  	}
 
- 		header("Location:" . URL . "monster/index");
+ 		header("Location:" . URL . "spell/index");
 }
 
 function htpygo(){
-	render("monster/htpygo");
+	render("spell/htpygo");
 }
 
