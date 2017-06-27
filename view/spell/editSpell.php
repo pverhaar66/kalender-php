@@ -27,6 +27,7 @@
 						<?= $type ?>
 					</option>
 					<?php	} ?>
+					<!-- $type gets its names from the assositive array -->
 				</select>
 
 				<p>Description</p><textarea maxlength="1000" rows="10" type="text" name="spell_description" class="inputtext3"> <?= $spell['spell_description']; ?> </textarea> <br>
