@@ -13,7 +13,8 @@
 				$type = array("Normal" => "Normal",
 				"Quick" => "Quick",
 				"continuous" => "continuous",
-				"Equip" => "Equip"); 
+				"Equip" => "Equip",
+				"ritual" => "ritual"); 
 				
 				foreach ($type as $type) { 
 				?>

@@ -12,6 +12,7 @@
 				<option value="Quick">Quick</option>
 				<option value="continuous">continuous</option>	
 				<option value="Equip">Equip</option>
+				<option value="ritual">ritual</option>
 			</select>
 
 			<p>Description</p><textarea maxlength="500" rows="12" type="text" name="spell_description" class="inputtext3"></textarea> <br>

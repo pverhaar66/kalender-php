@@ -3,6 +3,7 @@
 body
 {
 	background-image: url("img/etc/Back-TF-EN-VG.png");
+	width: 100%;
 	background-attachment: fixed;
 }
 
@@ -48,7 +49,16 @@ input{
 }
 /* ===== on all indexes ====== */
 
+#search, #searchbutton {
+	border: solid 2px white;
+	background-color: black;
+	color: Chocolate;
+}
 
+#searchbutton {
+	height: 37px;
+	width: 80px;	
+}
 
 #header {
 	height: 400px;
@@ -207,3 +217,5 @@ input{
 	height: 60px;
 	font-size: 40px;
 }
+
+

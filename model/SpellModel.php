@@ -28,7 +28,6 @@ function getSpell($id) {
 	return $query->fetch();
 	return true;
 
-	
 }
 
 

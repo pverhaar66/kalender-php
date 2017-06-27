@@ -83,7 +83,7 @@
 			<?php } ?>
 			</select>
 
-			<p>Description</p><textarea maxlength="500" rows="12" type="text" name="monster_description" class="inputtext3"></textarea> <br>
+			<p>Description</p><textarea maxlength="1000" rows="12" type="text" name="monster_description" class="inputtext3"></textarea> <br>
 
 
 			

@@ -26,11 +26,32 @@ function getmonster($id) {
 	$db = null;
 
 	return $query->fetch();
-	return true;
-
-	
 }
 
+
+
+function searchMonster($search){
+	$value = false;
+	$where = " ";
+	
+	if ($search) {
+		$where = " WHERE monster_name = :monster_name";
+		$value = $search;
+	}
+
+
+	$db = openDatabaseConnection();
+	$sql = "SELECT * FROM monsters". $where;
+	$query = $db->prepare($sql);
+	if ($value) {
+		$query->bindParam(":monster_name",$value);
+	}
+	$query->execute();
+	return $query->fetchAll();
+	
+	
+	$db = null;
+}
 
 function createmonster() {
 

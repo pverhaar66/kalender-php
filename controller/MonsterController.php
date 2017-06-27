@@ -44,6 +44,24 @@ if ($_GET["sort"] == "ASC") {
 	));
 }
 
+function monsterSearch()
+{
+
+if (isset($_GET["search"])) {
+
+	$search = $_GET["search"];
+}
+
+ 	if (!searchMonster($search)) {
+
+	 		header("Location:" . URL . "error/index");
+	 		exit();
+ 	}
+
+ 		header("Location:" . URL . "monster/searcher");
+}
+
+
 function create()
 {
 	render("monster/createmonster");
