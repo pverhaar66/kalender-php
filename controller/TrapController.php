@@ -37,6 +37,49 @@ if ($_GET["sort"] == "ASC") {
 	));
 }
 
+function trapSearch()
+{
+
+	if (isset($_GET["table"])) {
+
+	if ($_GET["table"] == "trap") {
+		$table = "trap";
+
+		}else if($_GET["table"] == "type"){
+			$table = "type";
+	}
+
+}else{
+	$table = "trap";
+}
+
+
+
+if (isset($_GET["sort"])) {
+
+if ($_GET["sort"] == "ASC") {
+		$sort = "ASC";
+	}else{
+		$sort = "DESC";
+	}
+}else{
+	$sort = "ASC";
+}
+
+
+$search = null;
+if (isset($_GET["search"])) {
+
+	$search = $_GET["search"];
+}
+
+ 		render("trap/index",
+ 			array("traps" => searchTrap($search),
+ 				"sort" => $sort == "ASC" ? "DESC" : "ASC"
+
+ 			));
+}
+
 function create()
 {
 	render("trap/createTrap");

@@ -47,18 +47,50 @@ if ($_GET["sort"] == "ASC") {
 function monsterSearch()
 {
 
+	if (isset($_GET["table"])) {
+
+	if ($_GET["table"] == "monster") {
+		$table = "monster_name";
+
+		}else if($_GET["table"] == "attribute"){
+			$table = "monster_attribute";
+
+		}else if($_GET["table"] == "type"){
+			$table = "monster_type1";
+			
+		}else if($_GET["table"] == "level"){
+			$table = "monster_level";
+	}
+
+}else{
+	$table = "monster_name";
+}
+
+
+
+if (isset($_GET["sort"])) {
+
+if ($_GET["sort"] == "ASC") {
+		$sort = "ASC";
+	}else{
+		$sort = "DESC";
+	}
+}else{
+	$sort = "ASC";
+}
+
+
+$search = null;
 if (isset($_GET["search"])) {
 
 	$search = $_GET["search"];
 }
 
- 	if (!searchMonster($search)) {
+ 		render("monster/index",
+ 			array("monsters" => searchMonster($search),
+ 				"sort" => $sort == "ASC" ? "DESC" : "ASC"
 
-	 		header("Location:" . URL . "error/index");
-	 		exit();
- 	}
-
- 		header("Location:" . URL . "monster/searcher");
+ 			));
 }
 
 

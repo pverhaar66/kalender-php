@@ -17,8 +17,6 @@ function index()
 	$table = "spell_name";
 }
 
-
-
 if (isset($_GET["sort"])) {
 
 if ($_GET["sort"] == "ASC") {
@@ -36,6 +34,50 @@ if ($_GET["sort"] == "ASC") {
 
 	));
 }
+
+function spellSearch()
+{
+
+	if (isset($_GET["table"])) {
+
+	if ($_GET["table"] == "spell") {
+		$table = "spell";
+
+		}else if($_GET["table"] == "type"){
+			$table = "type";
+	}
+
+}else{
+	$table = "spell";
+}
+
+
+
+if (isset($_GET["sort"])) {
+
+if ($_GET["sort"] == "ASC") {
+		$sort = "ASC";
+	}else{
+		$sort = "DESC";
+	}
+}else{
+	$sort = "ASC";
+}
+
+
+$search = null;
+if (isset($_GET["search"])) {
+
+	$search = $_GET["search"];
+}
+
+ 		render("spell/index",
+ 			array("spells" => searchSpell($search),
+ 				"sort" => $sort == "ASC" ? "DESC" : "ASC"
+
+ 			));
+}
+
 
 function create()
 {

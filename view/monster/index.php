@@ -10,8 +10,10 @@
 			 <a href='<?= URL ?>monster/htpygo'><button class="navbutton">How to play</button></a>
 		</nav>	
 		<table>
-		<input id="search" type="text" name="search" placeholder=" Majesty Maiden, the True Dracocaster"> <a href="<?= URL ?>monster/monsterSearch"><button id="searchbutton">Search</button></a>
-				<tr>
+			<form method="GET" action="<?= URL ?>monster/monsterSearch">
+			<input id="search" type="text" name="search" placeholder=" Ash Blossom & Joyous Spring"> <button id="searchbutton">Search</button>
+			</form>
+					<tr>
 					<td class="topnamemonster"><a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=monster">Name</td>
 					<td class="topmonster"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=attribute">Attribute</td>
 					<td class="topmonster" colspan="4"> <a href="<?= URL ?>monster/index?sort=<?= $sort ?>&table=type">Type</td>

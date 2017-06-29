@@ -35,17 +35,20 @@ function searchMonster($search){
 	$where = " ";
 	
 	if ($search) {
-		$where = " WHERE monster_name = :monster_name";
+		$where = " WHERE monster_name LIKE :monster_name";
 		$value = $search;
 	}
 
 
 	$db = openDatabaseConnection();
+
+
 	$sql = "SELECT * FROM monsters". $where;
 	$query = $db->prepare($sql);
-	if ($value) {
-		$query->bindParam(":monster_name",$value);
-	}
+		if ($value) {
+			$value = '%' . $value . '%';
+			$query->bindParam(":monster_name",$value );
+		}
 	$query->execute();
 	return $query->fetchAll();
 	

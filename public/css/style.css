@@ -3,8 +3,8 @@
 body
 {
 	background-image: url("img/etc/Back-TF-EN-VG.png");
-	width: 100%;
 	background-attachment: fixed;
+	background-size: fill;
 }
 
 a{
@@ -49,10 +49,20 @@ input{
 }
 /* ===== on all indexes ====== */
 
-#search, #searchbutton {
+#search, #searchbutton, #searchtrap, #searchspell {
 	border: solid 2px white;
 	background-color: black;
-	color: Chocolate;
+	color: white;
+}
+
+#search{
+	color: chocolate
+}
+#searchtrap{
+	color: BlueViolet;
+}
+#searchspell{
+	color: Aquamarine;
 }
 
 #searchbutton {

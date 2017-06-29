@@ -31,6 +31,33 @@ function getSpell($id) {
 }
 
 
+function searchSpell($search){
+	$value = false;
+	$where = " ";
+	
+	if ($search) {
+		$where = " WHERE spell_name LIKE :spell_name";
+		$value = $search;
+	}
+
+
+	$db = openDatabaseConnection();
+
+
+	$sql = "SELECT * FROM spells". $where;
+	$query = $db->prepare($sql);
+		if ($value) {
+			$value = '%' . $value . '%';
+			$query->bindParam(":spell_name",$value );
+		}
+	$query->execute();
+	return $query->fetchAll();
+	
+	
+	$db = null;
+}
+
+
 function createSpell() {
 
 

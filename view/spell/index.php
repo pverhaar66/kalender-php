@@ -10,7 +10,9 @@
 			 <a href='<?= URL ?>monster/htpygo'><button class="navbutton">How to play</button></a>
 		</nav>	
 		<table>
-
+			<form method="GET" action="<?= URL ?>spell/spellSearch">
+			<input id="searchspell" type="text" name="search" placeholder=" Black Pendant"> <button id="searchbutton">Search</button>
+			</form>
 				<tr>
 					<td class="topnamespell"><a href="<?= URL ?>spell/index?sort=<?= $sort ?>&table=spell">name</td>
 					<td class="topspell"> <a href="<?= URL ?>spell/index?sort=<?= $sort ?>&table=type">type</td>

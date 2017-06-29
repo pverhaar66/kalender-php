@@ -30,6 +30,31 @@ function getTrap($id) {
 
 	
 }
+function searchTrap($search){
+	$value = false;
+	$where = " ";
+	
+	if ($search) {
+		$where = " WHERE trap_name LIKE :trap_name";
+		$value = $search;
+	}
+
+
+	$db = openDatabaseConnection();
+
+
+	$sql = "SELECT * FROM traps". $where;
+	$query = $db->prepare($sql);
+		if ($value) {
+			$value = '%' . $value . '%';
+			$query->bindParam(":trap_name",$value );
+		}
+	$query->execute();
+	return $query->fetchAll();
+	
+	
+	$db = null;
+}
 
 
 function createTrap() {
